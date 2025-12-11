@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/nelson05122003/test-repo/compare/v0.0.2-dev...v0.1.0) (2025-12-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* Complete UI overhaul with breaking theme system
+
+### Features
+
+* Complete UI overhaul with breaking theme system ([7c13801](https://github.com/nelson05122003/test-repo/commit/7c138018b114bb80a25423428cf93afa4b6a0df7))
+
 ### [0.0.2](https://github.com/nelson05122003/test-repo/compare/v0.0.1-dev...v0.0.2) (2025-12-11)
 
 
