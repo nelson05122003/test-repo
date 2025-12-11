@@ -5,10 +5,12 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [ bgColor, setBgColor ] = useState('white');
+
 
   return (
     <>
-      <div>
+      <div className="logo-container" style={{ backgroundColor: bgColor }}>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -25,6 +27,10 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <button onClick={() => setBgColor(bgColor === 'white' ? 'blue' : 'white')}>
+        Toggle Background Color
+      </button>
+
       <footer>
         {/* @ts-ignore */}
         Frontend version: v{__APP_VERSION__}
