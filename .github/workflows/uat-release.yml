@@ -15,6 +15,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Debug - Show allowed value
+        run: |
+          echo "Received 'allowed' value: ${{ needs.check-commit.outputs.allowed }}"
+          echo "Condition result: ${{ needs.check-commit.outputs.allowed == 'true' }}"
+          
       - name: Checkout
         uses: actions/checkout@v4
         with:

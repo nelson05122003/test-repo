@@ -22,9 +22,19 @@ jobs:
           MSG=$(git --no-pager log -1 --pretty=%B | tr -d '\r')
           echo "Commit message (HEAD):"
           echo "$MSG"
+          echo "---"
+          
           # Check for allowed prefixes: feat:, fix:, feat!:
           if [[ "$MSG" =~ ^feat: ]] || [[ "$MSG" =~ ^fix: ]] || [[ "$MSG" =~ ^feat!: ]]; then
+            echo "✓ Commit message matches allowed pattern"
             echo "allowed=true" >> $GITHUB_OUTPUT
+            echo "Set allowed=true"
           else
+            echo "✗ Commit message does NOT match allowed patterns (feat:, fix:, feat!:)"
             echo "allowed=false" >> $GITHUB_OUTPUT
+            echo "Set allowed=false"
           fi
+          
+      - name: Debug output value
+        run: |
+          echo "Output 'allowed' was set to: ${{ steps.check-msg.outputs.allowed }}"
