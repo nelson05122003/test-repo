@@ -12,7 +12,8 @@ function App() {
   const [count, setCount] = useState(0)
   const [bgColor, setBgColor] = useState('white');
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
-
+  // @ts-ignore
+  console.log('Frontend version: v', __APP_VERSION__);
 
   return (
     <>
