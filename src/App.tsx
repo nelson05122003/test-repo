@@ -4,9 +4,6 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 // BREAKING CHANGE: Complete API redesign for v2.0
-interface AppProps {
-  version?: string;
-}
 
 function App() {
   const [count, setCount] = useState(0)
@@ -35,6 +32,7 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+        <button>Click Me</button>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
