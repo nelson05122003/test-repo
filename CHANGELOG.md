@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/nelson05122003/test-repo/compare/v2.0.0-stable...v3.0.0) (2025-12-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* Complete API redesign for v2.0 with breaking changes 2
+* Complete API redesign for v2.0 with breaking changes 2
+
+### Features
+
+* Complete API redesign for v2.0 with breaking changes 2 ([2412974](https://github.com/nelson05122003/test-repo/commit/2412974171df88a97de9b65c1f11db316c6958a6))
+* Complete API redesign for v2.0 with breaking changes 2 ([9d44ede](https://github.com/nelson05122003/test-repo/commit/9d44edea450afc6a1d93a6367b346d764512c533))
+
 ## [2.0.0](https://github.com/nelson05122003/test-repo/compare/v1.2.0-stable...v2.0.0) (2025-12-11)
 
 
