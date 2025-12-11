@@ -1,4 +1,4 @@
-name: UAT Frontend Release
+name: UAT  Release
 
 on:
   push:
@@ -61,24 +61,24 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git add frontend/package.json frontend/package-lock.json frontend/CHANGELOG.md
+          git add /package.json /package-lock.json /CHANGELOG.md
           git commit -m "chore(release): ${{ env.FINAL_VERSION }} [skip ci]"
           git tag -a "v${{ env.FINAL_VERSION }}" -m "Release ${{ env.FINAL_VERSION }}"
           git push origin HEAD:uat
           git push origin --tags
 
-      - name: Build frontend
+      - name: Build 
         
         run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: frontend-uat
-          path: frontend/dist
+          name: -uat
+          path: /dist
 
       - name: Release Summary
         run: |
-          echo "✅ UAT Frontend Release Completed"
+          echo "✅ UAT  Release Completed"
           echo "Version: ${{ env.FINAL_VERSION }}"
           echo "Tag: v${{ env.FINAL_VERSION }}"
