@@ -4,9 +4,6 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 // BREAKING CHANGE: Complete API redesign for v2.0
-interface AppProps {
-  version?: string;
-}
 
 function App() {
   const [count, setCount] = useState(0)
