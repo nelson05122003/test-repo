@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/nelson05122003/test-repo/compare/v1.1.0-dev...v1.1.0) (2025-12-11)
+
+
+### Features
+
+* Merge UAT to main - setup production workflow ([091abbc](https://github.com/nelson05122003/test-repo/commit/091abbc979eb8aa2ae7db50f2f10840444086dae))
+
 ## [1.1.0](https://github.com/nelson05122003/test-repo/compare/v0.1.2-dev...v1.1.0) (2025-12-11)
 
 
