@@ -10,6 +10,7 @@ function App() {
 
   return (
     <>
+      {/* TEST VERSIONING: This is a feature change for UAT workflow test */}
       <div className="logo-container" style={{ backgroundColor: bgColor }}>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
