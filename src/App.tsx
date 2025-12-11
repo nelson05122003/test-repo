@@ -37,6 +37,7 @@ function App() {
         Production version testing - Bug fix applied
       </p>
       <h1>Added Feature Test</h1>
+      <h2>Production Feature: Enhanced User Experience</h2>
       <button onClick={() => setBgColor(bgColor === 'white' ? 'blue' : 'white')}>
         Toggle Background Color
       </button>
