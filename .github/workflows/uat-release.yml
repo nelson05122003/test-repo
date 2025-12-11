@@ -9,8 +9,26 @@ jobs:
   check-commit:
     uses: ./.github/workflows/check-commit.yml
 
+  debug-outputs:
+    runs-on: ubuntu-latest
+    needs: [check-commit]
+    if: always()
+    steps:
+      - name: Show all outputs from check-commit
+        run: |
+          echo "========================================="
+          echo "DEBUG: Outputs from check-commit job"
+          echo "========================================="
+          echo "needs.check-commit.outputs.allowed = '${{ needs.check-commit.outputs.allowed }}'"
+          echo "Type check - is it 'true' string? ${{ needs.check-commit.outputs.allowed == 'true' }}"
+          echo "Type check - is it true boolean? ${{ needs.check-commit.outputs.allowed == true }}"
+          echo "Type check - is it truthy? ${{ needs.check-commit.outputs.allowed }}"
+          echo "========================================="
+          echo "Check-commit job result: ${{ needs.check-commit.result }}"
+          echo "========================================="
+
   release:
-    if: ${{ needs.check-commit.outputs.allowed == true }}
+    if: ${{ needs.check-commit.outputs.allowed == 'true' }}
     needs: [check-commit]
     runs-on: ubuntu-latest
 
