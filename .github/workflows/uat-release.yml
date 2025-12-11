@@ -60,9 +60,9 @@ jobs:
         run: |
           git add package.json package-lock.json CHANGELOG.md
           git commit -m "chore(release): ${{ env.FINAL_VERSION }} [skip ci]"
-          git tag -a "v${{ env.FINAL_VERSION }}" -m "Release ${{ env.FINAL_VERSION }}"
+          git tag -fa "v${{ env.FINAL_VERSION }}" -m "Release ${{ env.FINAL_VERSION }}"
           git push origin HEAD:uat
-          git push origin --tags
+          git push origin --tags --force
 
       - name: Build
         run: npm run build
