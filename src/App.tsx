@@ -8,7 +8,7 @@ interface AppProps {
   version?: string;
 }
 
-function App({ version = '2.0' }: AppProps) {
+function App() {
   const [count, setCount] = useState(0)
   const [bgColor, setBgColor] = useState('white');
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
