@@ -63,43 +63,26 @@ jobs:
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
 
-      - name: Run standard-version (bump package + changelog)
+      - name: Run standard-version (bump package + changelog + without git tag)
         env:
           GIT_AUTHOR_NAME: ${{ github.actor }}
           GIT_AUTHOR_EMAIL: ${{ github.actor }}@users.noreply.github.com
           GIT_COMMITTER_NAME: ${{ github.actor }}
           GIT_COMMITTER_EMAIL: ${{ github.actor }}@users.noreply.github.com
-        run: |
-          npx standard-version
 
-      - name: Append -dev suffix, commit and tag, PUSH change & tag (so you can pull locally)
+      - name: Append -dev suffix, create annotated -dev tag and push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          set -e
-          # get bumped version from package.json
           BASE_VERSION=$(jq -r .version package.json)
           FINAL_VERSION="${BASE_VERSION}-dev"
-          echo "Base version bumped by standard-version: ${BASE_VERSION}"
-          echo "Final version (with -dev suffix): ${FINAL_VERSION}"
-
-          # update package.json version to include -dev
           jq --arg v "$FINAL_VERSION" '.version=$v' package.json > tmp.json && mv tmp.json package.json
-
-          # stage files changed by standard-version + updated package.json
-          git add package.json package-lock.json CHANGELOG.md || true
-
-          # commit with [skip ci] to avoid re-triggering workflows
-          git commit -m "chore(release): ${FINAL_VERSION} [skip ci]" || echo "No changes to commit"
-
-          # create or update an annotated tag - include the suffix so tags reflect the dev version
-          git tag -fa "v${FINAL_VERSION}" -m "Release ${FINAL_VERSION}" || true
-
-          # push commit and tags using the provided GITHUB_TOKEN credential
+          git add package.json
+          git commit -m "chore(release): ${FINAL_VERSION} [skip ci]" || echo "no changes to commit"
+          # create annotated -dev tag (unique)
+          git tag -a "v${FINAL_VERSION}" -m "Release ${FINAL_VERSION}"
           git push origin HEAD:uat
           git push origin --tags
-
-          echo "Pushed release commit and tags: v${FINAL_VERSION}"
 
       - name: Build frontend (uses the repo's updated files with final version)
         run: npm run build
