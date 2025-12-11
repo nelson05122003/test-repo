@@ -7,6 +7,13 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
+* Added H1 ([6ce364c](https://github.com/nelson05122003/test-repo/commit/6ce364cc2a2abff31dcd84760948804763b0464d))
+
+### [0.0.1](https://github.com/nelson05122003/test-repo/compare/v0.0.1-dev...v0.0.1) (2025-12-11)
+
+
+### Features
+
 * test versioning workflow ([6fb8cc2](https://github.com/nelson05122003/test-repo/commit/6fb8cc2fd2351cb88c2bd96f5a7cc8b7d0c69c1a))
 * test versioning workflow ([b032666](https://github.com/nelson05122003/test-repo/commit/b032666223a94f63958be8704644d4359fdfc66e))
 
