@@ -2,6 +2,58 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/nelson05122003/test-repo/compare/v1.1.1-dev...v2.0.0) (2025-12-11)
+
+
+### Bug Fixes
+
+* Added something in App ([ca9a4e6](https://github.com/nelson05122003/test-repo/commit/ca9a4e6a406a71d10cbe214d09b1f7889854f6ce))
+
+## [3.0.0-stable](https://github.com/nelson05122003/test-repo/compare/v2.0.0-stable...v3.0.0-stable) (2025-12-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* Complete API redesign for v2.0 with breaking changes 2
+* Complete API redesign for v2.0 with breaking changes 2
+
+### Features
+
+* Complete API redesign for v2.0 with breaking changes 2 ([2412974](https://github.com/nelson05122003/test-repo/commit/2412974171df88a97de9b65c1f11db316c6958a6))
+* Complete API redesign for v2.0 with breaking changes 2 ([9d44ede](https://github.com/nelson05122003/test-repo/commit/9d44edea450afc6a1d93a6367b346d764512c533))
+
+## [2.0.0-stable](https://github.com/nelson05122003/test-repo/compare/v1.2.0-stable...v2.0.0-stable) (2025-12-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* Complete API redesign for v2.0 with breaking changes
+
+### Features
+
+* Complete API redesign for v2.0 with breaking changes ([134b27b](https://github.com/nelson05122003/test-repo/commit/134b27bd000a0cdd9f8642d93eedff8c998a9040))
+
+## [1.2.0-stable](https://github.com/nelson05122003/test-repo/compare/v1.1.1-stable...v1.2.0-stable) (2025-12-11)
+
+
+### Features
+
+* Add enhanced user experience section ([2fa1220](https://github.com/nelson05122003/test-repo/commit/2fa1220a60270e075f17f42be322b1c1a42b3a30))
+
+### [1.1.1-stable](https://github.com/nelson05122003/test-repo/compare/v1.1.0-stable...v1.1.1-stable) (2025-12-11)
+
+
+### Bug Fixes
+
+* Add production version info text ([0d29eb6](https://github.com/nelson05122003/test-repo/commit/0d29eb64f4b1d2ca7c73ab431ae53cc1a35eebb9))
+
+## [1.1.0-stable](https://github.com/nelson05122003/test-repo/compare/v1.1.0-dev...v1.1.0-stable) (2025-12-11)
+
+
+### Features
+
+* Merge UAT to main - setup production workflow ([091abbc](https://github.com/nelson05122003/test-repo/commit/091abbc979eb8aa2ae7db50f2f10840444086dae))
+
 ### [1.1.1](https://github.com/nelson05122003/test-repo/compare/v1.1.0-dev...v1.1.1) (2025-12-11)
 
 
