@@ -5,11 +5,14 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  const [ bgColor, setBgColor ] = useState('white');
+  const [bgColor, setBgColor] = useState('white');
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
 
   return (
     <>
+      {/* BREAKING CHANGE: Complete UI overhaul with new theme system */}
+      <div className="app-container" data-theme={theme}>
       {/* TEST VERSIONING: This is a feature change for UAT workflow test */}
       <div className="logo-container" style={{ backgroundColor: bgColor }}>
         <a href="https://vite.dev" target="_blank">
@@ -32,6 +35,11 @@ function App() {
       <button onClick={() => setBgColor(bgColor === 'white' ? 'blue' : 'white')}>
         Toggle Background Color
       </button>
+
+      <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+        Toggle Theme (BREAKING CHANGE)
+      </button>
+      </div>
 
       <footer>
         {/* @ts-ignore */}
