@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 // BREAKING CHANGE: Complete API redesign for v2.0
@@ -17,14 +15,6 @@ function App() {
       {/* BREAKING CHANGE: Complete UI overhaul with new theme system */}
       <div className="app-container" data-theme={theme}>
       {/* TEST VERSIONING: This is a feature change for UAT workflow test */}
-      <div className="logo-container" style={{ backgroundColor: bgColor }}>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
       <h1>Vite + React</h1>
       <h2>Testing Minor Version Bump with feat:</h2>
       <p>Version display has been fixed</p>
