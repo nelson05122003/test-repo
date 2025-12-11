@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/nelson05122003/test-repo/compare/v0.1.2-dev...v1.1.0) (2025-12-11)
+
+
+### Features
+
+* Update workflows for merge triggers and set base version to 1.0.0 ([730a26c](https://github.com/nelson05122003/test-repo/commit/730a26c6090883619d0286c1d9372caa3c518cb5))
+
 ### [0.1.2](https://github.com/nelson05122003/test-repo/compare/v0.1.1-dev...v0.1.2) (2025-12-11)
 
 
