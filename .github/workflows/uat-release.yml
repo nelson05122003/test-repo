@@ -1,9 +1,13 @@
-name: UAT  Release
+name: UAT Release
 
 on:
   push:
     branches:
       - uat
+  pull_request:
+    branches:
+      - uat
+    types: [closed]
   workflow_dispatch: {}
 
 permissions:
@@ -11,6 +15,8 @@ permissions:
 
 jobs:
   check-commit:
+    # Only run on push or merged PRs
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
     uses: ./.github/workflows/check-commit.yml
 
   release:
@@ -86,6 +92,6 @@ jobs:
 
       - name: Release Summary
         run: |
-          echo "✅ UAT  Release Completed"
+          echo "✅ UAT Release Completed"
           echo "Version: ${{ env.FINAL_VERSION }}"
           echo "Tag: v${{ env.FINAL_VERSION }}"
