@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/nelson05122003/test-repo/compare/v1.1.0-dev...v1.1.1) (2025-12-11)
+
+
+### Bug Fixes
+
+* Added app version ([ad919de](https://github.com/nelson05122003/test-repo/commit/ad919de3ab0acb402d85778075c20637455aaf3f))
+
 ## [1.1.0](https://github.com/nelson05122003/test-repo/compare/v0.1.2-dev...v1.1.0) (2025-12-11)
 
 
