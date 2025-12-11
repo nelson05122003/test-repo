@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/nelson05122003/test-repo/compare/v0.0.1-dev...v0.0.2) (2025-12-11)
+
+
+### Features
+
+* test minor version bump ([c04ac2a](https://github.com/nelson05122003/test-repo/commit/c04ac2ac94f5d88b9477f90146a5742bfa02760d))
+
+
+### Bug Fixes
+
+* Remove -dev suffix before running standard-version ([4c1ec18](https://github.com/nelson05122003/test-repo/commit/4c1ec1858086ed02a16dad37885b716d2e9c433e))
+
 ### [0.0.1](https://github.com/nelson05122003/test-repo/compare/v0.0.1-dev...v0.0.1) (2025-12-11)
 
 
