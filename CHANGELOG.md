@@ -7,6 +7,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
+* test versioning workflow ([6fb8cc2](https://github.com/nelson05122003/test-repo/commit/6fb8cc2fd2351cb88c2bd96f5a7cc8b7d0c69c1a))
+* test versioning workflow ([b032666](https://github.com/nelson05122003/test-repo/commit/b032666223a94f63958be8704644d4359fdfc66e))
+
+### [0.0.1](https://github.com/nelson05122003/test-repo/compare/v0.0.1-dev...v0.0.1) (2025-12-11)
+
+
+### Features
+
 * Added Background color Change Button ([ce93c8d](https://github.com/nelson05122003/test-repo/commit/ce93c8dd384254b3ede80fd7d65405714468d45e))
 * Added Background color Change Button and Fixed workflow ([3b67f65](https://github.com/nelson05122003/test-repo/commit/3b67f6585874911ca50f99376a46cb65b3c9b030))
 * Fixed Workflow ([58f232f](https://github.com/nelson05122003/test-repo/commit/58f232fa2b2467f038d36348433ff4d668113cf1))
