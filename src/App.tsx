@@ -3,7 +3,12 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
+// BREAKING CHANGE: Complete API redesign for v2.0
+interface AppProps {
+  version?: string;
+}
+
+function App({ version = '2.0' }: AppProps) {
   const [count, setCount] = useState(0)
   const [bgColor, setBgColor] = useState('white');
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
