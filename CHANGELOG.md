@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/nelson05122003/test-repo/compare/v1.1.1-stable...v1.2.0) (2025-12-11)
+
+
+### Features
+
+* Add enhanced user experience section ([2fa1220](https://github.com/nelson05122003/test-repo/commit/2fa1220a60270e075f17f42be322b1c1a42b3a30))
+
 ### [1.1.1](https://github.com/nelson05122003/test-repo/compare/v1.1.0-stable...v1.1.1) (2025-12-11)
 
 
