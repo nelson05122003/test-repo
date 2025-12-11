@@ -10,6 +10,7 @@ jobs:
     uses: ./.github/workflows/check-commit.yml
 
   release:
+    echo: ${{ needs.check-commit.outputs.allowed }}
     if: ${{ needs.check-commit.outputs.allowed == 'true' }}
     needs: [check-commit]
     runs-on: ubuntu-latest
