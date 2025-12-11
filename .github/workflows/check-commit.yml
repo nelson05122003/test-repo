@@ -2,6 +2,10 @@
 name: Check Commit Message
 on:
   workflow_call:
+    outputs:
+      allowed:
+        description: "Whether the commit message matches allowed patterns"
+        value: ${{ jobs.check.outputs.allowed }}
 
 jobs:
   check:
