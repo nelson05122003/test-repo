@@ -1,5 +1,5 @@
+# .github/workflows/check-commit.yml
 name: Check Commit Message
-
 on:
   workflow_call:
 
@@ -8,14 +8,23 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       allowed: ${{ steps.check-msg.outputs.allowed }}
+
     steps:
-      - name: Check commit message
+      - name: Checkout repo (required to read commit message)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Read HEAD commit message and decide
         id: check-msg
         run: |
-          echo "Commit msg: ${{ github.event.head_commit.message }}"
-          MSG="${{ github.event.head_commit.message }}"
-
+          # Read most recent commit message (works for push with many commits)
+          MSG=$(git --no-pager log -1 --pretty=%B | tr -d '\r')
+          echo "Commit message (HEAD):"
+          echo "$MSG"
+          # Check for allowed prefixes: feat:, fix:, feat!:
           if [[ "$MSG" =~ ^feat: ]] || [[ "$MSG" =~ ^fix: ]] || [[ "$MSG" =~ ^feat!: ]]; then
             echo "allowed=true" >> $GITHUB_OUTPUT
           else
             echo "allowed=false" >> $GITHUB_OUTPUT
+          fi
