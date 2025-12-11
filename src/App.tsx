@@ -3,6 +3,11 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+// BREAKING CHANGE: Complete API redesign for v2.0
+interface AppProps {
+  version?: string;
+}
+
 function App() {
   const [count, setCount] = useState(0)
   const [bgColor, setBgColor] = useState('white');
@@ -34,7 +39,11 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <p className="read-the-docs">
+        Production version testing - Bug fix applied
+      </p>
       <h1>Added Feature Test</h1>
+      <h2>Production Feature: Enhanced User Experience</h2>
       <button onClick={() => setBgColor(bgColor === 'white' ? 'blue' : 'white')}>
         Toggle Background Color
       </button>
