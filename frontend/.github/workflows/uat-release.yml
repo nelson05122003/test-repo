@@ -1,0 +1,56 @@
+name: UAT Frontend Release
+
+on:
+  push:
+    branches:
+      - uat
+
+jobs:
+  check-commit:
+    uses: ./.github/workflows/check-commit.yml
+
+  release:
+    if: ${{ needs.check-commit.outputs.allowed == 'true' }}
+    needs: [check-commit]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install deps
+        working-directory: frontend
+        run: npm ci
+
+      - name: Run standard-version (NO push)
+        working-directory: frontend
+        env:
+          GIT_AUTHOR_NAME: ci
+          GIT_AUTHOR_EMAIL: ci@example.com
+        run: |
+          npx standard-version --release-as "$(npx standard-version --dry-run | grep -oE 'major|minor|patch')"
+
+      - name: Append -dev suffix
+        working-directory: frontend
+        run: |
+          VERSION=$(jq -r .version package.json)
+          FINAL_VERSION="${VERSION}-dev"
+          jq --arg v "$FINAL_VERSION" '.version=$v' package.json > tmp.json && mv tmp.json package.json
+          echo "Final UAT version: $FINAL_VERSION"
+
+      - name: Build frontend
+        working-directory: frontend
+        run: npm run build
+
+      - name: Upload artifact (optional)
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-uat
+          path: frontend/dist
