@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/nelson05122003/test-repo/compare/v2.0.0-dev...v2.0.1) (2025-12-11)
+
+
+### Bug Fixes
+
+* added and removed ([4ab3f7f](https://github.com/nelson05122003/test-repo/commit/4ab3f7fcea499b8df7db17747d9de9144048bb3f))
+* Removed ([9159175](https://github.com/nelson05122003/test-repo/commit/9159175d73057536b3d30cd8f7e23159edab39f7))
+
 ## [2.0.0](https://github.com/nelson05122003/test-repo/compare/v1.1.1-dev...v2.0.0) (2025-12-11)
 
 
