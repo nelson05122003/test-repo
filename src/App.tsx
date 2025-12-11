@@ -43,6 +43,7 @@ function App() {
       <footer>
         {/* @ts-ignore */}
         Frontend version: v{__APP_VERSION__}
+        <p>The above version is displayed using a custom global variable injected during build time.</p>
       </footer>
     </>
   )
